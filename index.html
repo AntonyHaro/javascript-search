@@ -9,27 +9,30 @@
     </head>
     <body>
         <h1 style="margin-bottom: 8%">Pesquise dados de um user JSON!</h1>
-        <form action="" onsubmit="handleSearch(event)">
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Pesquisar nome"
-            />
-            <input
-                type="number"
-                id="age"
-                name="age"
-                min="0"
-                placeholder="Pesquisar idade"
-            />
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Pesquisar email"
-            />
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="container">
+            <form action="" onsubmit="handleSearch(event)">
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Pesquisar nome"
+                />
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="0"
+                    placeholder="Pesquisar idade"
+                />
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Pesquisar email"
+                />
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="render-space"></div>
+        </div>
     </body>
 </html>

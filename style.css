@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: hsl(0, 0%, 91%);
+  background-color: hsl(0, 0%, 85%);
   height: 100vh;
   font-size: 14px;
   display: flex;
@@ -18,6 +18,15 @@ body {
 h1 {
   color: hsl(0, 0%, 20%);
   font-size: 2.5em;
+}
+
+.container {
+  background-color: #b8b8b8;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 12px;
 }
 
 input, button {
@@ -36,3 +45,23 @@ button:hover {
   cursor: pointer;
   background-color: gray;
 }
+
+#render-space {
+  width: 50%;
+}
+
+.results-container {
+  width: 100%;
+  background-color: #fff;
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.user-info {
+  background-color: #cacaca;
+  padding: 0.7rem;
+  border-radius: 5px;
+}
+

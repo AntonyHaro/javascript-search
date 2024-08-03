@@ -34,26 +34,44 @@ async function handleSearch(event) {
 }
 
 function searchItems(users, name, age, email) {
-    //função para definir o padrão a ser testado
-    const setStringPattern = (string) => {
-        return new RegExp(`^${string}`, "i");
-    };
-
-    //definindo as variaveis que serão testadas
-    const namePattern = name ? setStringPattern(name) : null;
-    const emailPattern = email ? setStringPattern(email) : null;
-
-    //filtração dos dados para a variavel results
     const results = users.filter((user) => {
-        const userName = user.nome.toLowerCase();
-        const userEmail = user.email.toLowerCase();
+        const matchName = name
+            ? user.nome.toLowerCase().startsWith(name.toLowerCase())
+            : true;
+        const matchAge = age ? user.idade === age : true;
+        const matchEmail = email
+            ? user.email.toLowerCase().startsWith(email.toLowerCase())
+            : true;
 
-        return (
-            (!namePattern || namePattern.test(userName)) &&
-            (!age || user.idade === age) &&
-            (!emailPattern || emailPattern.test(userEmail))
-        );
+        return matchName && matchAge && matchEmail;
     });
 
-    console.log(results);
+    showResults(results);
+}
+
+function showResults(results) {
+    const renderSpace = document.getElementById("render-space");
+
+    renderSpace.innerHTML = "";
+
+    const createElement = (tag, className, text) => {
+        const element = document.createElement(tag);
+        className ? (element.className = className) : null;
+        element.textContent = text;
+        return element;
+    };
+
+    const resultsContainer = createElement("div", "results-container");
+
+    results.forEach((user) => {
+        const userInfo = createElement("div", "user-info");
+
+        const userName = createElement("p", "", user.nome);
+        const userAge = createElement("p", "", user.idade);
+        const userEmail = createElement("p", "", user.email);
+
+        userInfo.append(userName, userAge, userEmail);
+        resultsContainer.appendChild(userInfo);
+    });
+    renderSpace.appendChild(resultsContainer);
 }
