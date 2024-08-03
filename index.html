@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Renderizando JSON</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1 style="margin-bottom: 8%">Pesquise dados de um user JSON!</h1>
+        <form action="" onsubmit="handleSearch(event)">
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Pesquisar nome"
+            />
+            <input
+                type="number"
+                id="age"
+                name="age"
+                min="0"
+                placeholder="Pesquisar idade"
+            />
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Pesquisar email"
+            />
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>

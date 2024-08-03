@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: hsl(0, 0%, 91%);
+  height: 100vh;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: hsl(0, 0%, 20%);
+  font-size: 2.5em;
+}
+
+input, button {
+  padding: 1rem;
+  outline: none;
+  border: 1px solid hsl(0, 0%, 20%);
+  border-radius: 8px;
+}
+
+button {
+  background-color: rgb(150, 150, 150);
+  transition: 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: gray;
+}

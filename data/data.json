@@ -1,0 +1,84 @@
+{
+    "user1": {
+        "nome": "João da Silva",
+        "idade": 30,
+        "email": "joao.silva@example.com",
+        "pais": "Brasil",
+        "enderecos": [
+            {
+                "tipo": "residencial",
+                "rua": "Rua das Flores",
+                "numero": 123,
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "01001-000"
+            },
+            {
+                "tipo": "comercial",
+                "rua": "Avenida Central",
+                "numero": 456,
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "01002-000"
+            }
+        ],
+        "telefones": [
+            {
+                "tipo": "celular",
+                "numero": "+55 11 91234-5678"
+            },
+            {
+                "tipo": "fixo",
+                "numero": "+55 11 1234-5678"
+            }
+        ]
+    },
+    "user2": {
+        "nome": "Maria Pereira",
+        "idade": 56,
+        "email": "maria@example.com",
+        "pais": "Brasil",
+        "enderecos": [
+            {
+                "tipo": "residencial",
+                "rua": "Rua das Maravilhas",
+                "numero": 123,
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "11111-000"
+            }
+        ],
+        "telefones": [
+            {
+                "tipo": "celular",
+                "numero": "+55 11 11134-5678"
+            }
+        ]
+    },
+    "user3": {
+        "nome": "Henrique Dias",
+        "idade": 16,
+        "email": "henriquedias@example.com",
+        "pais": "Brasil",
+        "enderecos": [
+            {
+                "tipo": "residencial",
+                "rua": "Rua Mangueira Almirante",
+                "numero": 123,
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "22222-000"
+            }
+        ],
+        "telefones": [
+            {
+                "tipo": "celular",
+                "numero": "+55 11 99999-5678"
+            },
+            {
+                "tipo": "celular",
+                "numero": "+55 11 99999-9999"
+            }
+        ]
+    }
+}
