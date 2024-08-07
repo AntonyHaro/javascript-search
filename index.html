@@ -8,31 +8,34 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <h1 style="margin-bottom: 8%">Pesquise dados de um user JSON!</h1>
-        <div class="container">
-            <form action="" onsubmit="handleSearch(event)">
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Pesquisar nome"
-                />
-                <input
-                    type="number"
-                    id="age"
-                    name="age"
-                    min="0"
-                    placeholder="Pesquisar idade"
-                />
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Pesquisar email"
-                />
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="render-space"></div>
-        </div>
+        <h1>Pesquise dados de um user JSON!</h1>
+        <main>
+            <div class="container">
+                <form action="" onsubmit="handleSearch(event)">
+                    <input
+                        style="flex: 1;"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Pesquisar nome"
+                    />
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        min="0"
+                        placeholder="Pesquisar idade"
+                    />
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Pesquisar email"
+                    />
+                    <button type="submit">Enviar</button>
+                </form>
+                <div id="render-space"><p id="default-p">Nenhum resultado</p></div>
+            </div>
+        </main>
     </body>
 </html>

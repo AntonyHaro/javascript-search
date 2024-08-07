@@ -34,6 +34,7 @@ async function handleSearch(event) {
 }
 
 function searchItems(users, name, age, email) {
+    //função para filtrar os itens da pesquisa
     const results = users.filter((user) => {
         const matchName = name
             ? user.nome.toLowerCase().startsWith(name.toLowerCase())
@@ -50,6 +51,7 @@ function searchItems(users, name, age, email) {
 }
 
 function showResults(results) {
+    //função para renderizar os resultados
     const renderSpace = document.getElementById("render-space");
 
     renderSpace.innerHTML = "";
@@ -61,17 +63,14 @@ function showResults(results) {
         return element;
     };
 
-    const resultsContainer = createElement("div", "results-container");
-
     results.forEach((user) => {
         const userInfo = createElement("div", "user-info");
 
-        const userName = createElement("p", "", user.nome);
-        const userAge = createElement("p", "", user.idade);
-        const userEmail = createElement("p", "", user.email);
+        const userName = createElement("p", "", `Nome: ${user.nome}`);
+        const userAge = createElement("p", "", `Idade: ${user.idade}`);
+        const userEmail = createElement("p", "", `Email: ${user.email}`);
 
         userInfo.append(userName, userAge, userEmail);
-        resultsContainer.appendChild(userInfo);
+        renderSpace.appendChild(userInfo);
     });
-    renderSpace.appendChild(resultsContainer);
 }

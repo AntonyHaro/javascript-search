@@ -1,67 +1,98 @@
+:root {
+  --text-color: hsl(0, 0%, 5%);
+  --primary-background: hsl(0, 0%, 72%);
+  --second-background: hsl(0, 0%, 50%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: monospace;
+  color: var(--text-color);
 }
 
 body {
   background-color: hsl(0, 0%, 85%);
   height: 100vh;
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 h1 {
-  color: hsl(0, 0%, 20%);
-  font-size: 2.5em;
+  color: var(--text-color);
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 3%;
+  margin-top: 8%;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
-  background-color: #b8b8b8;
-  display: grid;
-  place-items: center;
-  gap: 2rem;
-  padding: 2.5rem;
+  background-color: var(--primary-background);
+  width: 50%;
+  margin-bottom: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.6rem;
   border-radius: 12px;
 }
 
-input, button {
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input,
+button {
   padding: 1rem;
   outline: none;
-  border: 1px solid hsl(0, 0%, 20%);
+  border: 1px solid var(--text-color);
   border-radius: 8px;
 }
 
 button {
-  background-color: rgb(150, 150, 150);
-  transition: 0.3s;
+  background-color: hsl(0, 0%, 33%);
+  color: white;
+  transition: 0.4s;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: gray;
+  background-color: hsl(0, 0%, 25%);
+  border-radius: 12px;
 }
 
 #render-space {
-  width: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
-.results-container {
-  width: 100%;
-  background-color: #fff;
-  display: grid;
-  gap: 2rem;
-  padding: 1rem;
-  border-radius: 8px;
+#default-p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: hsl(0, 0%, 43%);
 }
 
 .user-info {
-  background-color: #cacaca;
-  padding: 0.7rem;
+  background-color: var(--second-background);
+  color: white;
+  padding: 1rem;
   border-radius: 5px;
+  display: grid;
+  gap: 0.5rem;
 }
-
