@@ -52,8 +52,8 @@ function searchItems(users, name, age, email) {
 
 function showResults(results) {
     //função para renderizar os resultados
-    const renderSpace = document.getElementById("render-space");
 
+    const renderSpace = document.getElementById("render-space");
     renderSpace.innerHTML = "";
 
     const createElement = (tag, className, text) => {
@@ -62,6 +62,16 @@ function showResults(results) {
         element.textContent = text;
         return element;
     };
+
+    if (results.length === 0) {
+        const noResultsMessage = createElement(
+            "p",
+            "no-results",
+            "Nenhum resultado"
+        );
+        renderSpace.appendChild(noResultsMessage);
+        return;
+    }
 
     results.forEach((user) => {
         const userInfo = createElement("div", "user-info");

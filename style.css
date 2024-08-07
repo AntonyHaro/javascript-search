@@ -82,7 +82,7 @@ button:hover {
   gap: 1rem;
 }
 
-#default-p {
+.no-results {
   font-size: 1.1em;
   font-weight: bold;
   color: hsl(0, 0%, 43%);
