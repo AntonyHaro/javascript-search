@@ -1,7 +1,7 @@
 :root {
   --text-color: hsl(0, 0%, 5%);
   --primary-background: hsl(0, 0%, 72%);
-  --second-background: hsl(0, 0%, 50%);
+  --second-background: hsl(0, 0%, 64%);
 }
 
 * {
