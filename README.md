@@ -12,6 +12,7 @@ Este projeto é uma aplicação web simples para pesquisar e exibir informaçõe
 
 - Preencha o formulário com os critérios de busca (nome, idade e email).
 - Clique no botão de pesquisa para ver os resultados filtrados na página.
+- Acesse a aplicação pelo seguinte link: https://antonyharo.github.io/javascript-search/
 
 ## Estrutura do Projeto
 
